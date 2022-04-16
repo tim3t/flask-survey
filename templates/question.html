@@ -5,4 +5,12 @@
 <h1>
     {{question.question}}
 </h1>
+<form action="/answer" method="post" name="form">
+<p>
+{%for choice in question.choices%}
+<input type="radio" name="answer">{{choice}}</input>
+{%endfor%}
+<button type="submit">Continue</button>
+</p>
+</form>
 {%endblock%}
